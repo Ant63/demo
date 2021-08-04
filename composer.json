@@ -19,6 +19,7 @@
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-project-message": "^9.2",
         "drupal/core-recommended": "^9.2",
+        "drupal/devel_kint_extras": "^1.0",
         "drush/drush": "^10.5"
     },
     "conflict": {
@@ -30,6 +31,12 @@
         "sort-packages": true
     },
     "extra": {
+        "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "#2350939-181: Add UI for entity revisions": "https://www.drupal.org/files/issues/2021-06-17/2350939-181.patch"
+            }
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
