@@ -1,0 +1,38 @@
+uuid: ec58d940-d59f-4d48-a1dc-6dd8f46da04d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.test_type.body
+    - field.field.node.test_type.field_upload
+    - node.type.test_type
+  module:
+    - file
+    - text
+    - user
+id: node.test_type.default
+targetEntityType: node
+bundle: test_type
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_upload:
+    weight: 102
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
